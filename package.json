@@ -13,21 +13,19 @@
   ],
   "author": "Jean-Francois Arseneau",
   "license": "WTFPL",
-  "dependencies": {
-    "grunt": "0.x.x",
-    "grunt-autoprefixer": "0.2.x",
-    "grunt-contrib-clean": "0.5.x",
-    "grunt-contrib-coffee": "0.7.x",
-    "grunt-contrib-copy": "0.4.x",
-    "grunt-contrib-cssmin": "0.6.x",
-    "grunt-contrib-jshint": "0.6.x",
-    "grunt-contrib-stylus": "0.8.x",
-    "grunt-contrib-uglify": "0.2.x",
-    "grunt-contrib-watch": "0.5.x",
-    "grunt-express": "~1.2.1"
-  },
   "engine": "node >= 0.10",
   "devDependencies": {
-    "grunt-contrib-pug": "^1.0.0"
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "^0.6.5",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express": "^1.4.1"
   }
 }
