@@ -3,3 +3,6 @@ build
 
 # Node packages
 node_modules
+
+# Ignore Mac OS X system files
+*.DS_Store
