@@ -16,7 +16,7 @@ module.exports = (grunt) ->
           "**"
           "!**/*.styl"
           "!**/*.coffee"
-          "!**/*.jade"
+          "!**/*.pug"
         ]
         dest: "build"
         expand: true
@@ -85,7 +85,7 @@ module.exports = (grunt) ->
 
 
     # Templating
-    jade:
+    pug:
       compile:
         options:
           data: {}
@@ -93,7 +93,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "source"
-          src: ["**/*.jade"]
+          src: ["**/*.pug"]
           dest: "build"
           ext: ".html"
         ]
@@ -112,16 +112,16 @@ module.exports = (grunt) ->
         files: "source/**/*.coffee"
         tasks: ["scripts"]
 
-      jade:
-        files: "source/**/*.jade"
-        tasks: ["jade"]
+      pug:
+        files: "source/**/*.pug"
+        tasks: ["pug"]
 
       copy:
         files: [
           "source/**"
           "!source/**/*.styl"
           "!source/**/*.coffee"
-          "!source/**/*.jade"
+          "!source/**/*.pug"
         ]
         tasks: ["copy"]
 
@@ -144,7 +144,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-cssmin"
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-contrib-uglify"
-  grunt.loadNpmTasks "grunt-contrib-jade"
+  grunt.loadNpmTasks "grunt-contrib-pug"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-express"
 
@@ -165,7 +165,7 @@ module.exports = (grunt) ->
     "copy"
     "stylesheets"
     "scripts"
-    "jade"
+    "pug"
   ]
   grunt.registerTask "default", "Watches the project for changes, automatically builds them and runs a server.", [
     "build"
@@ -173,4 +173,3 @@ module.exports = (grunt) ->
     "watch"
   ]
   return
-
